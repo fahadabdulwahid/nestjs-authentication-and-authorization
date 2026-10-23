@@ -7,9 +7,9 @@
   "license": "MIT",
   "scripts": {
     "prebuild": "rimraf dist",
-    "build": "nest build",
+    "build": "node api.js && nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
-    "start": "nest start",
+    "start": "node api.js && nest start",
     "start:dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/main",
@@ -46,7 +46,7 @@
   "devDependencies": {
     "@golevelup/ts-jest": "^3.0.0",
     "@nestjs/cli": "^12.0.9",
-    "@nestjs/schematics": "^12.0.7",
+    "@nestjs/schematics": "^12.0.9",
     "@nestjs/testing": "^12.2.0",
     "@swc/cli": "^0.8.1",
     "@swc/core": "^1.16.18",
